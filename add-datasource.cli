@@ -1,0 +1,7 @@
+# $WILDFLY_HOME/bin/jboss-cli.sh --file=/path/to/this/file.
+embed-server
+batch
+
+data-source add --name=${env.DB2_DATASOURCE_NAME} --driver-name=${env.DB2_DATASOURCE_DRIVER_NAME} --jndi-name=${env.DB2_DATASOURCE_JNDI_NAME} --connection-url="${env.DB2_DATASOURCE_URL}" --user-name=${env.DB2_DATASOURCE_USER} --password=${env.DB2_DATASOURCE_PASSWORD} --use-ccm=false --max-pool-size=${env.DB2_DATASOURCE_MAX_POOL_SIZE} --blocking-timeout-wait-millis=${env.DB2_DATASOURCE_BLOCK_TIMEOUT} --enabled=true
+
+run-batch

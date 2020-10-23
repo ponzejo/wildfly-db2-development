@@ -1,0 +1,7 @@
+# $WILDFLY_HOME/bin/jboss-cli.sh --file=/path/to/this/file.
+embed-server
+batch
+
+deploy --name=db2 /opt/jboss/db2.jar 
+
+run-batch
